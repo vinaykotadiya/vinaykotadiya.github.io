@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vinay Kotadiya – Data Analyst Portfolio</title>
 <meta name="description" content="Vinay Kotadiya – Data Analyst. SQL, Excel, Power BI and Python. MSc Data Science (Distinction), University of Hertfordshire.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vinay Kotadiya – Data Analyst">
+<meta property="og:description" content="MSc Data Science (Distinction). SQL, Excel, Power BI and Python. Projects, skills and CV.">
+<meta property="og:url" content="https://vinaykotadiya.github.io/">
+<meta name="theme-color" content="#f26a1b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141414'/%3E%3Crect x='14' y='34' width='9' height='16' rx='2' fill='%23fff'/%3E%3Crect x='27.5' y='24' width='9' height='26' rx='2' fill='%23f26a1b'/%3E%3Crect x='41' y='14' width='9' height='36' rx='2' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,7 +34,7 @@ header.scrolled{border-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-weight:800;font-size:28px;color:var(--ink);letter-spacing:-1px}
 .logo span{color:var(--accent)}
-.links{display:flex;align-items:center;gap:34px;font-weight:500;font-size:15px;color:var(--ink)}
+.links{display:flex;align-items:center;gap:28px;font-weight:500;font-size:15px;color:var(--ink)}
 .links a.l{position:relative;padding:6px 0}
 .links a.l:hover,.links a.l.active{color:var(--accent)}
 .links a.l.active::after{content:"";position:absolute;left:0;bottom:-2px;width:18px;height:2px;background:var(--accent);border-radius:2px}
@@ -53,6 +59,31 @@ header.scrolled{border-color:var(--line)}
 .hero p{max-width:440px;margin-bottom:28px}
 .cta{display:flex;flex-wrap:wrap;gap:14px}
 .hero-art svg{width:100%;height:auto}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px}
+.stat b{display:block;font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.8px;line-height:1.1}
+.stat b span{color:var(--accent)}
+.stat small{display:block;margin-top:6px;font-size:14px;color:var(--text);line-height:1.4}
+/* building */
+.building{margin-top:22px;border:1.600px dashed #f3c7a8;border-radius:16px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;background:var(--card)}
+.pulse{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:8px;flex:none;box-shadow:0 0 0 0 rgba(242,106,27,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(242,106,27,0)}100%{box-shadow:0 0 0 0 rgba(242,106,27,0)}}
+.building h3{font-size:16.500px;font-weight:700}
+.building h3 em{font-style:normal;color:var(--accent);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:2px}
+.building p{font-size:14.500px;margin-top:4px}
+.repo{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--accent)}
+.repo .ic{width:15px;height:15px}
+.repo:hover{text-decoration:underline}
+/* open to */
+.open-to{margin-top:34px;padding-top:26px;border-top:1px solid #f3d9c6;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.open-to b{color:var(--ink);font-size:14.500px;margin-right:4px}
+.chip{background:#fff;border:1px solid #f3d9c6;border-radius:999px;padding:6px 14px;font-size:13.500px;font-weight:500;color:var(--ink)}
+.copy-btn{font-family:inherit;font-size:12.500px;font-weight:600;color:var(--accent);background:#fff;border:1px solid #f3d9c6;border-radius:8px;padding:4px 10px;cursor:pointer;flex:none}
+.copy-btn:hover{border-color:var(--accent)}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:40px}.stat{padding:16px}.stat b{font-size:25px}}
 
 /* about */
 .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;padding:40px 0 64px;border-bottom:1px solid var(--line)}
@@ -103,6 +134,14 @@ section.block{padding:56px 0 8px}
 .xp h3{font-size:17.5px;font-weight:700;margin:2px 0}
 .xp-where{color:var(--accent);font-weight:600;font-size:13.5px;margin-bottom:6px}
 .xp p{font-size:14.5px;line-height:1.55}
+.xp.two{grid-template-columns:repeat(2,1fr);gap:22px}
+.xp.two .xp-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.xp.three{grid-template-columns:repeat(3,1fr);gap:18px}
+.xp.three .xp-item{padding:20px 18px;gap:12px}
+.xp.three .xp-ico{width:46px;height:46px}
+.xp ul{padding-left:18px;display:grid;gap:5px;margin-top:4px}
+.xp li{font-size:14.500px;line-height:1.55}
+.xp li::marker{color:var(--accent)}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
@@ -179,6 +218,8 @@ section.block{padding:56px 0 8px}
   .skills{grid-template-columns:repeat(3,1fr)}
   .work{grid-template-columns:1fr}
   .xp{grid-template-columns:1fr;gap:26px}
+  .xp.two,.xp.three{grid-template-columns:1fr;gap:14px}
+  .xp.two .xp-item{padding:18px}
   .steps{grid-template-columns:1fr;gap:22px}
   .steps::before{top:0;bottom:0;left:35px;right:auto;border-top:0;border-left:2px dashed #f3c7a8}
   .step{display:grid;grid-template-columns:72px 1fr;column-gap:16px;text-align:left;align-items:center}
@@ -242,6 +283,7 @@ section.block{padding:56px 0 8px}
       <a class="l" href="#skills">Skills</a>
       <a class="l" href="#work">Work</a>
       <a class="l" href="#experience">Experience</a>
+      <a class="l" href="#education">Education</a>
       <a class="l" href="#contact">Contact</a>
       <a class="btn btn-dark" href="#contact">Let's Talk <svg class="ic"><use href="#i-arrow"/></svg></a>
     </nav>
@@ -310,6 +352,14 @@ section.block{padding:56px 0 8px}
     </div>
   </section>
 
+  <!-- STATS -->
+  <div class="stats reveal">
+    <div class="stat"><b>Distinction</b><small>MSc Data Science, University of Hertfordshire</small></div>
+    <div class="stat"><b>245K<span>+</span></b><small>sales records cleaned and analysed in SQL</small></div>
+    <div class="stat"><b>3</b><small>data projects, from raw data to recommendation</small></div>
+    <div class="stat"><b>2.5 <span>yrs</span></b><small>leading a team of 3–5 as a supervisor</small></div>
+  </div>
+
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-art reveal">
@@ -370,7 +420,6 @@ section.block{padding:56px 0 8px}
   <section class="block" id="work">
     <div class="row-head reveal">
       <div class="sec-head"><h2>Selected Work</h2><span class="underline"></span></div>
-      <a class="more" href="https://github.com/vinaykotadiya" target="_blank" rel="noopener">View All Projects <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="work">
       <article class="proj reveal">
@@ -383,7 +432,7 @@ section.block{padding:56px 0 8px}
           </svg>
         </div>
         <div class="proj-body">
-          <h3>Retail Sales Dashboard <svg class="ic"><use href="#i-ext"/></svg></h3>
+          <h3>Retail Sales Dashboard</h3>
           <p>Cleaned about 245,000 sales records from 20 UK grocery stores in SQL, then built a Power BI dashboard showing revenue, margin and year-on-year change down to each store.</p>
           <div class="find"><b>Finding:</b> weekend sales per visitor were about 15% lower in three regions with fewer staff. Checked with a t-test and suggested a weekend staffing trial.</div>
           <div class="tags"><span>SQL</span><span>Excel</span><span>Power BI</span></div>
@@ -405,10 +454,11 @@ section.block{padding:56px 0 8px}
           </svg>
         </div>
         <div class="proj-body">
-          <h3>UK Electric Vehicle Adoption <svg class="ic"><use href="#i-ext"/></svg></h3>
+          <h3>UK Electric Vehicle Adoption</h3>
           <p>MSc dissertation. Used 5+ years of UK government registration data to study how electric vehicle numbers are growing in each region.</p>
           <div class="find"><b>Method:</b> built and compared ARIMA, Holt-Winters and LSTM forecasting models, chose the most accurate, and showed the results in clear charts.</div>
           <div class="tags"><span>Python</span><span>Pandas</span><span>Statsmodels</span></div>
+          <a class="repo" href="https://github.com/vinaykotadiya/ev-adoption-forecast" target="_blank" rel="noopener"><svg class="ic"><use href="#i-gh"/></svg>View code on GitHub</a>
           <div class="note">MSc dissertation · UK government data</div>
         </div>
       </article>
@@ -425,7 +475,7 @@ section.block{padding:56px 0 8px}
           </svg>
         </div>
         <div class="proj-body">
-          <h3>Customer Churn Analysis <svg class="ic"><use href="#i-ext"/></svg></h3>
+          <h3>Customer Churn Analysis</h3>
           <p>Looked at 12,000 customers of a subscription business to find out why people cancel, then built a Tableau dashboard to show it.</p>
           <div class="find"><b>Finding:</b> support tickets, monthly plans and late payments were the main reasons. Suggested three simple actions to keep high-value customers.</div>
           <div class="tags"><span>SQL</span><span>Python</span><span>Tableau</span></div>
@@ -435,26 +485,29 @@ section.block{padding:56px 0 8px}
     </div>
   </section>
 
+  <div class="wrap-building reveal">
+    <div class="building">
+      <span class="pulse"></span>
+      <div>
+        <h3><em>Now building</em>UK Online Retail Sales Analysis</h3>
+        <p>An end-to-end project on real data: clean it in Excel, query it in SQL, choose the KPIs, then build a Power BI dashboard.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- EXPERIENCE -->
   <section class="block" id="experience">
-    <div class="sec-head reveal"><h2>Experience &amp; Education</h2><span class="underline"></span></div>
-    <div class="xp">
+    <div class="sec-head reveal"><h2>Work Experience</h2><span class="underline"></span></div>
+    <div class="xp two three">
       <div class="xp-item reveal">
-        <div class="xp-ico"><svg class="ic"><use href="#i-cap"/></svg></div>
+        <div class="xp-ico"><svg class="ic"><use href="#i-shield"/></svg></div>
         <div>
-          <div class="xp-when">2024 – 2026</div>
-          <h3>MSc Data Science</h3>
-          <div class="xp-where">University of Hertfordshire · Distinction</div>
-          <p>Machine learning, statistical modelling, data analysis, NLP and research methods.</p>
-        </div>
-      </div>
-      <div class="xp-item reveal">
-        <div class="xp-ico"><svg class="ic"><use href="#i-case"/></svg></div>
-        <div>
-          <div class="xp-when">Feb 2024 – Sep 2026</div>
-          <h3>Housekeeping Supervisor</h3>
-          <div class="xp-where">Shoreditch Inn, London</div>
-          <p>Managed a team of 3–5, managed stock and made weekly staff rotas for busy and quiet days.</p>
+          <div class="xp-when">Oct 2026 – Present</div>
+          <h3>Security Officer</h3>
+          <div class="xp-where">Vespasian Security</div>
+          <ul>
+            <li>Cover 12-hour weekend day shifts on the HSU campus, alongside my weekday role.</li>
+          </ul>
         </div>
       </div>
       <div class="xp-item reveal">
@@ -463,11 +516,52 @@ section.block{padding:56px 0 8px}
           <div class="xp-when">Sep 2026 – Present</div>
           <h3>Security Guard</h3>
           <div class="xp-where">Fortel Security Services</div>
-          <p>Control site access, check IDs and keep the Daily Occurrence Book up to date on every shift.</p>
+          <ul>
+            <li>Control site access, check IDs and keep the Daily Occurrence Book up to date on every shift.</li>
+            <li>Make sure staff and visitors follow safety rules on a construction site and in a hotel.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-item reveal">
+        <div class="xp-ico"><svg class="ic"><use href="#i-case"/></svg></div>
+        <div>
+          <div class="xp-when">Feb 2024 – Sep 2026</div>
+          <h3>Housekeeping Supervisor</h3>
+          <div class="xp-where">Shoreditch Inn, London</div>
+          <ul>
+            <li>Managed a team of 3–5 housekeepers, managed stock and made weekly staff rotas for busy and quiet days.</li>
+            <li>Worked with front desk and maintenance teams every day to sort out room issues.</li>
+            <li>Checked rooms after cleaning and fixed guest complaints quickly.</li>
+          </ul>
         </div>
       </div>
     </div>
-    <p class="learning reveal" style="margin-top:26px"><b>Also:</b> Bachelor of Computer Application, Saurashtra University (CGPA 8.06/10) · Deloitte Data Analytics Job Simulation (Forage, 2024)</p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="block" id="education">
+    <div class="sec-head reveal"><h2>Education</h2><span class="underline"></span></div>
+    <div class="xp two">
+      <div class="xp-item reveal">
+        <div class="xp-ico"><svg class="ic"><use href="#i-cap"/></svg></div>
+        <div>
+          <div class="xp-when">2024 – 2026</div>
+          <h3>MSc Data Science with Advanced Research</h3>
+          <div class="xp-where">University of Hertfordshire, UK · Distinction</div>
+          <p>Modules: machine learning, statistical modelling, data analysis, NLP and research methods.</p>
+        </div>
+      </div>
+      <div class="xp-item reveal">
+        <div class="xp-ico"><svg class="ic"><use href="#i-book"/></svg></div>
+        <div>
+          <div class="xp-when">2021 – 2024</div>
+          <h3>Bachelor of Computer Application (BCA)</h3>
+          <div class="xp-where">Saurashtra University, India · CGPA 8.06/10</div>
+          <p>Three-year degree in computer applications.</p>
+        </div>
+      </div>
+    </div>
+    <p class="learning reveal" style="margin-top:26px"><b>Certification:</b> Data Analytics Job Simulation, Deloitte (Forage), 2024</p>
   </section>
 
   <!-- PROCESS -->
@@ -492,7 +586,7 @@ section.block{padding:56px 0 8px}
         <span class="underline" style="margin-top:14px"></span>
       </div>
       <div class="c-list">
-        <a href="mailto:vinaykotadiya49@gmail.com"><svg class="ic"><use href="#i-mail"/></svg>vinaykotadiya49@gmail.com</a>
+        <div><a href="mailto:vinaykotadiya49@gmail.com"><svg class="ic"><use href="#i-mail"/></svg>vinaykotadiya49@gmail.com</a><button class="copy-btn" id="copyEmail" type="button">Copy</button></div>
         <a href="https://www.linkedin.com/in/vinay-kotadiya" target="_blank" rel="noopener"><svg class="ic"><use href="#i-in"/></svg>linkedin.com/in/vinay-kotadiya</a>
         <div><svg class="ic"><use href="#i-pin"/></svg>London, UK · open to relocating</div>
       </div>
@@ -505,6 +599,14 @@ section.block{padding:56px 0 8px}
         </div>
         <div class="status"><i></i>Available full-time · no sponsorship needed</div>
       </div>
+    </div>
+    <div class="open-to">
+      <b>Open to:</b>
+      <span class="chip">Junior Data Analyst</span>
+      <span class="chip">Graduate Data Analyst</span>
+      <span class="chip">BI Analyst</span>
+      <span class="chip">Business Analyst</span>
+      <span class="chip">Anywhere in the UK</span>
     </div>
     <div class="copy">© 2026 Vinay Kotadiya. All rights reserved. <span>♥</span></div>
   </div>
@@ -569,6 +671,12 @@ section.block{padding:56px 0 8px}
 
     <h2>Experience</h2>
     <div class="cv-item">
+      <div class="cv-top"><h3>Security Officer, Vespasian Security</h3><span>Oct 2026 – Present</span></div>
+      <ul>
+        <li>Cover 12-hour weekend day shifts on the HSU campus, alongside my weekday role.</li>
+      </ul>
+    </div>
+    <div class="cv-item">
       <div class="cv-top"><h3>Security Guard, Fortel Security Services</h3><span>Sep 2026 – Present</span></div>
       <ul>
         <li>Control site access, check IDs and keep the Daily Occurrence Book up to date on every shift.</li>
@@ -622,6 +730,13 @@ section.block{padding:56px 0 8px}
     else if(e.target.closest('[data-cv-close]')){setCv(false);}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setCv(false);});
+
+  var cb=document.getElementById('copyEmail');
+  cb.addEventListener('click',function(){
+    var done=function(t){cb.textContent=t;setTimeout(function(){cb.textContent='Copy';},1800);};
+    try{navigator.clipboard.writeText('vinaykotadiya49@gmail.com').then(function(){done('Copied');},function(){done('Press and hold to copy');});}
+    catch(e){done('Press and hold to copy');}
+  });
 
   var items=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
